@@ -1,37 +1,209 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio website for showcasing the work of a Full Stack Developer.">
+    <meta name="keywords" content="full stack developer, portfolio, web developer, software engineer">
+    <meta name="author" content="Your Name">
+    <title>Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #333;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects, .about, .contact {
+            padding: 2rem;
+        }
+
+        .projects h2, .about h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background: #fff;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            margin: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-item h3 {
+            margin-top: 1rem;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #4facfe;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Discover my journey as a Full Stack Developer and explore my work.</p>
+                <a href="#projects" class="cta-button">View Projects</a>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A brief description of Project 1.</p>
+                </div>
+                <div class="project-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2.</p>
+                </div>
+                <div class="project-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a Full Stack Developer specializing in creating dynamic and user-friendly web applications. With expertise in front-end and back-end development, I aim to deliver high-quality solutions to meet diverse client needs.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyPortfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
